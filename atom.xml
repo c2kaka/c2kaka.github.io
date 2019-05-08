@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-04T13:25:24.218Z</updated>
+  <updated>2019-05-08T15:03:57.868Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP常用标签</title>
+    <link href="http://yoursite.com/2019/05/08/HTTP%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/"/>
+    <id>http://yoursite.com/2019/05/08/HTTP常用标签/</id>
+    <published>2019-05-08T15:03:57.000Z</published>
+    <updated>2019-05-08T15:03:57.868Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>HTTP请求和响应初探</title>

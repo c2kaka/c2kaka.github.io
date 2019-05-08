@@ -16,10 +16,13 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="前端">
 
 
-    <meta name="description" content="kaka的博客">
+    <meta name="description" content="HTML常用标签HTML 常用标签iframe标签HTML内联框架元素  表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。
+属性
+frameborder 
+取值为1时（默认值）...">
 
 
 
@@ -154,6 +157,8 @@
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
                 
+                    <a class="tag-link" href="/tags/前端/">前端</a>
+                
             </span>
         </span>
     
@@ -172,7 +177,107 @@
     </div>
     
     <div class="post-body post-content">
-        
+        <h1 id="HTML常用标签"><a href="#HTML常用标签" class="headerlink" title="HTML常用标签"></a>HTML常用标签</h1><h2 id="HTML-常用标签"><a href="#HTML-常用标签" class="headerlink" title="HTML 常用标签"></a>HTML 常用标签</h2><h3 id="iframe标签"><a href="#iframe标签" class="headerlink" title="iframe标签"></a>iframe标签</h3><p><strong>HTML内联框架元素 <iframe></iframe></strong> 表示嵌套的浏览上下文，有效地将另一个HTML页面嵌入到当前页面中。</p>
+<p><strong>属性</strong></p>
+<p><strong>frameborder</strong> </p>
+<p>取值为1时（默认值），告诉浏览器在当前iframe与其他iframe之间绘制边框，取0时则无需绘制此边框。默认的比较丑，一般取0。</p>
+<p><strong>height</strong></p>
+<p>以CSS像素格式指定frame的高度。</p>
+<p><strong>width</strong></p>
+<p>以CSS像素格式或以百分比格式指定frame的宽度。</p>
+<p><strong>name</strong></p>
+<p>嵌入的浏览上下文（框架）的名称。该名称可以用作标签<a>，<form>的<code>target</code>属性值，或者标签<input>,<button>的<code>formtaget</code>属性值。</button></form></a></p>
+<p><strong>src</strong></p>
+<p>嵌套页面的URL地址。使用遵守同源策略的  <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#Inherited_origins" target="_blank" rel="noopener">‘about:blank’</a> 来嵌套空白页。</p>
+<hr>
+<h3 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h3><p><strong>HTML</strong>  元素  (或锚元素) 可以创建一个到其他网页、文件、同一页面内的位置、电子邮件地址或任何其他URL的超链接。</p>
+<p><strong>属性</strong></p>
+<p><strong>download</strong></p>
+<p>此属性指示浏览器下载URL或者文件而不是导航到它，因此将提示用户将其保存为本地文件。<strong>此属性仅使用于**</strong>同源URL**, 如果不是同源(同域), 将会导航到该URL, 例如:</p>
+<ul>
+<li><p><code>&lt;a href=&quot;http://127.0.0.1:8080/index.html&quot; download=&quot;index&quot;&gt;下载&lt;/a&gt;</code> 会下载同源的一个index.html</p>
+</li>
+<li><p><code>&lt;a href=&quot;http://qq.com&quot; download=&quot;qq&quot;&gt;下载&lt;/a&gt;</code>, <code>download</code>无效, 将导航到qq.com</p>
+<p><code>target</code>: 该属性指定在何处显示链接的资源。 取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词。</p>
+</li>
+<li><p><code>target=&quot;_self&quot;</code>: 当前页面加载, 如果没有指定此属性的话, 该值是默认值.</p>
+</li>
+<li><p><code>target=&quot;_blank&quot;</code>: 新窗口打开</p>
+</li>
+<li><p><code>target=&quot;_parent&quot;</code>: 会加载到当前页面的父页面, 如果没有父页面,则等同于<code>_self</code></p>
+</li>
+<li><p><code>targe=&quot;_top&quot;</code>: 会加载到最顶层页面, 祖先级页面, 当index1.html包含index2.html, index2.html包含index3.html, 则index3.html中的跳转则会加载到index1.html上</p>
+</li>
+</ul>
+<p><strong>href</strong></p>
+<p>包含超链接指向的URL或URL片段。</p>
+<ul>
+<li><code>&lt;a href=&quot;qq.com&quot;&gt;QQ&lt;/a&gt;</code>:,点击QQ不会跳转到qq.com 会把qq.com当成文件, <strong>不是以.com为后缀就是网址,也可以是文件</strong></li>
+<li><code>&lt;a href=&quot;//qq.com&quot;&gt;QQ&lt;/a&gt;</code>, 不写协议的时候, 无协议绝对地址, 默认是当前页面协议, 是file协议, 就跳转file://qq.com, 是HTTP协议, 就跳转到<a href="http://qq.com" target="_blank" rel="noopener">http://qq.com</a></li>
+<li><code>&lt;a href=&quot;xxx.html&quot;&gt;xxx&lt;/a&gt;</code>, 相对路径, 路径只会以目录为参考, 如果在index.html中跳转, 并不会以index.html为前缀<code>index.html/xxx.html</code>, 会显示<code>xxx.html</code></li>
+<li><code>&lt;a href=&quot;#1&quot;&gt;1ink&lt;/a&gt;</code>, 写锚点, 会自动加到后面, 不会发起请求, <code>index.html#1</code>, 虽然不会发起请求,但是页面会有变化.</li>
+<li><code>&lt;a href=&quot;?name=xxx&quot;&gt;query&lt;/a&gt;</code>, 写参数, 会自动加到后面, 并发起GET请求, <code>index.html?name=xxx</code></li>
+<li><code>&lt;a href=&quot;javascript: alert(1)&quot;&gt;js&lt;/a&gt;</code>, 伪协议, 会执行js代码.</li>
+<li><code>&lt;a href=&quot;javascript:;&quot;&gt;js&lt;/a&gt;</code>, 伪协议, 使其标签点击而不做任何动作，可以实现某些奇葩需求</li>
+<li><code>&lt;a href=&quot;&quot;&gt;blank&lt;/a&gt;</code>, 什么也不写, 页面会刷新, 跳转到了自己.</li>
+</ul>
+<p><strong>name</strong></p>
+<p>和iframe配合使用</p>
+<hr>
+<h3 id="form标签"><a href="#form标签" class="headerlink" title="form标签"></a>form标签</h3><p><strong>HTML</strong>元素</p>
+<p>表示了文档中的一个区域，这个区域包含有交互控制元件，用来向web服务器提交信息。</p>
+<blockquote>
+<p><strong>a标签和form标签都是跳转, 区别就是a标签发起的是GET请求, form标签发起的是POST请求.</strong></p>
+</blockquote>
+<p><strong>属性</strong></p>
+<p><strong>action</strong><br>提交(POST)数据所到的地方.<code>action=&quot;users&quot;</code>, 就是提交到users, 一个处理这个form信息的程序所在的URL.<br><strong>method</strong><br>浏览器使用这种指定方式来提交 form, GET一般不用写, 如果是GET, 提交的数据会被作为查询参数, 并不会放到第四部分作为formdata, POST会把提交的数据放到formdata里, 如果要给POST加查询参数, 可以通过给URL加查询参数<code>?query=xxx</code><br> <strong>target</strong><br>和a标签相同<br><strong>name</strong><br>HTML5中，一个文档中的多个form当中，name必须唯一而不仅仅是一个空字符串. 也可以与<strong>iframe标签</strong>配合使用.</p>
+<p><strong>如果form标签没有提交按钮, 则无法提交, html里只有form标签能提交数据，提交按钮可以是有一个 input type=submit 的元素或者有一个 button 元素，button 的 type 属性为空</strong></p>
+<hr>
+<h3 id="input标签"><a href="#input标签" class="headerlink" title="input标签"></a>input标签</h3><p><strong>HTML input 元素</strong>用于为基于Web的表单创建交互式控件，以便接受来自用户的数据。使用input标签提交数据, 必须有name属性.</p>
+<p><strong>属性</strong></p>
+<p><strong>type</strong><br> 要呈现的控件类型</p>
+<ul>
+<li><code>type=&quot;button&quot;</code>: 普通按钮 </li>
+<li><code>type=&quot;checkbox&quot;</code>: 复选框。必须使用 value 属性定义此控件被提交时的值</li>
+<li><code>color</code>： 用于指定颜色的控件。</li>
+<li><code>date：</code>用于输入日期的控件（年，月，日，不包括时间）。</li>
+<li><code>datetime</code>：基于 UTC 时区的日期时间输入控件（时，分，秒及几分之一秒）。</li>
+<li><code>datetime-local</code>：用于输入日期时间控件，不包含时区。</li>
+<li><code>email</code>：用于编辑 e-mail 的字段。 合适的时候可以使用 </li>
+<li><code>file</code>：此控件可以让用户选择文件。使用 accept 属性可以定义控件可以选择的文件类型。</li>
+<li><code>hidden</code>：不显示在页面上的控件，但它的值会被提交到服务器。</li>
+<li><code>image</code>：图片提交按钮。必须使用 src 属性定义图片的来源及使用 alt 定义替代文本。还可以使用 height 和 width 属性以像素为单位定义图片的大小。</li>
+<li><code>month</code>：用于输入年月的控件，不带时区。</li>
+<li><code>number</code>:用于输入浮点数的控件。</li>
+<li><code>password</code>：一个值被遮盖的单行文本字段。使用 maxlength 指定可以输入的值的最大长度 。</li>
+<li><code>radio</code>：单选按钮。必须使用 value 属性定义此控件被提交时的值。使用checked 必须指示控件是否缺省被选择。在同一个”单选按钮组“中，所有单选按钮的 name 属性使用同一个值； 一个单选按钮组中是，同一时间只有一个单选按钮可以被选择。 </li>
+<li><code>reset</code>：用于将表单所内容设置为缺省值的按钮。</li>
+<li><code>search</code>：用于输入搜索字符串的单行文本字段。换行会被从输入的值中自动移除。</li>
+<li><code>submit</code>：用于提交表单的按钮。</li>
+<li><code>tel</code>： 用于输入电话号码的控件；换行会被自动从输入的值中移除A，但不会执行其他语法。可以使用属性，比如 pattern 和 maxlength 来约束控件输入的值。恰当的时候，可以应用 </li>
+<li><code>text</code>：单行字段；换行会将自动从输入的值中移除。</li>
+<li><code>time</code>：用于输入不含时区的时间控件。</li>
+<li><code>url</code>：用于编辑URL的字段。 The user may enter a blank or invalid address. 换行会被自动从输入值中移队。可以使用如：pattern 和 maxlength 样的属性来约束输入的值。 恰当的时候使可以应用 </li>
+<li><code>week</code>：用于输入一个由星期-年组成的日期，日期不包括时区。</li>
+</ul>
+<p><strong>autocomplete</strong><br>这个属性表示这个控件的值是否可被浏览器自动填充。如果<strong>type</strong>属性的值是hidden、checkbox、radio、file，或为按钮类型（button、submit、reset、image），则本属性被忽略。</p>
+<p><strong>autofocus</strong><br>这个布尔属性允许您指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。文档中只有一个表单元素可以具有autofocus属性，它是一个布尔值。 如果type属性设置为隐藏则不能应用（即您不能自动获得焦点的属性设置为隐藏的控件）。</p>
+<p><strong>disabled</strong><br>这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， <code>click</code> 事件 [将不会被分发]。 并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  hidden，此属性将被忽略。</p>
+<p><strong>小Tips:可以使用将input元素嵌入到label元素中达到点击文本时自动将焦点移动到input上元素上</strong></p>
+<hr>
+<h3 id="button标签"><a href="#button标签" class="headerlink" title="button标签"></a>button标签</h3><p><strong>HTML button 元素</strong>表示一个可点击的按钮，可以用在表单或文档其它需要使用简单标准按钮的地方</p>
+<p><strong>input和button区别</strong>: 是否是空元素, button有子元素, input没有</p>
+<p><strong>属性</strong></p>
+<p><strong>type</strong><br>button的类型</p>
+<ul>
+<li><code>submit</code>:  此按钮将表单数据提交给服务器。如果未指定属性，或者属性动态更改为空值或无效值，则此值为默认值。</li>
+<li><code>reset</code>:  此按钮重置所有组件为初始值。</li>
+<li><code>button</code>: 此按钮没有默认行为。它可以有与元素事件相关的客户端脚本，当事件出现时可触发。</li>
+<li><code>menu</code>: 此按钮打开一个由指定元素进行定义的弹出菜单。</li>
+</ul>
+<p><strong>name</strong><br>button的名称，与表单数据一起提交。</p>
+<p><strong>value</strong><br>button的初始值。它定义的值与表单数据的提交按钮相关联。当表单中的数据被提交时，这个值便以参数的形式被递送至服务器。</p>
+
     </div>
     
     <div class="post-footer">
@@ -235,7 +340,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML常用标签"><span class="toc-text">HTML常用标签</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-常用标签"><span class="toc-text">HTML 常用标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#iframe标签"><span class="toc-text">iframe标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#a标签"><span class="toc-text">a标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#form标签"><span class="toc-text">form标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#input标签"><span class="toc-text">input标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#button标签"><span class="toc-text">button标签</span></a></li></ol></li></ol></li></ol>
         
     </div>
 </aside>

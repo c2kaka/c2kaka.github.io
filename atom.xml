@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-08T15:09:54.269Z</updated>
+  <updated>2019-05-09T12:22:01.646Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS学习笔记</title>
+    <link href="http://yoursite.com/2019/05/09/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2019/05/09/CSS学习笔记/</id>
+    <published>2019-05-09T12:21:25.000Z</published>
+    <updated>2019-05-09T12:22:01.646Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CSS学习笔记"><a href="#CSS学习笔记" class="headerlink" title="CSS学习笔记"></a>CSS学习笔记</h1><h2 id="导航栏的CSS简单实现"><a href="#导航栏的CSS简单实现" class="headerlink" title="导航栏的CSS简单实现"></a>导航栏的CSS简单实现</h2><p>利用css可以将垂直展示的ul,ol列表转变为水平展示的导航栏<br><strong>html代码：</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul class=&quot;clearfix&quot;&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;关于&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;技能&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;作品&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;博客&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;日历&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;联系方式&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;其他&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure><p><strong>css代码</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">clearfix::after&#123;</span><br><span class="line">    content:&quot;&quot;;</span><br><span class="line">    display:block;</span><br><span class="line">    clear:both;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">li &#123;</span><br><span class="line">float: left;</span><br><span class="line">margin-left: 17px;</span><br><span class="line">margin-right: 17px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>可以记住口诀：子元素加float属性，父元素使用clearfix</p><h2 id="高度是由什么决定的"><a href="#高度是由什么决定的" class="headerlink" title="高度是由什么决定的"></a>高度是由什么决定的</h2><h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h3><p>块级元素相对简单，高度是由其内部文档流高度总和决定的。那么什么是文档流呢？文档流即是文档内的元素流动方向。内联元素是从左往右流动的，当宽度不足时，自动换行。块级元素是从上往下流动的。</p><h3 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h3><p>内联元素相对复杂，其中font-size的问题最为经典，font-size的值指字体最低的部分到字体最高部分的距离，而为了展示效果，默认行高根据不同字体有所差异。我们也可以通过line-height属性来设置建议行高，然后只有在字体大小较小时，line-height才生效。</p><h2 id="css画一个三角形"><a href="#css画一个三角形" class="headerlink" title="css画一个三角形"></a>css画一个三角形</h2><p>html代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;triangle&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><p>css代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.triangle&#123;</span><br><span class="line">  width:0;</span><br><span class="line">  border:20px solid transparent;</span><br><span class="line">  border-top-width:0;</span><br><span class="line">  border-left-color:blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;CSS学习笔记&quot;&gt;&lt;a href=&quot;#CSS学习笔记&quot; class=&quot;headerlink&quot; title=&quot;CSS学习笔记&quot;&gt;&lt;/a&gt;CSS学习笔记&lt;/h1&gt;&lt;h2 id=&quot;导航栏的CSS简单实现&quot;&gt;&lt;a href=&quot;#导航栏的CSS简单实现&quot; class=&quot;he
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>HTTP常用标签</title>

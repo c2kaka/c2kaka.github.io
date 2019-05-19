@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-19T00:51:26.971Z</updated>
+  <updated>2019-05-19T02:40:52.985Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>VSCode前端开发插件配置</title>
+    <link href="http://yoursite.com/2019/05/19/VSCode%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2019/05/19/VSCode前端开发插件配置/</id>
+    <published>2019-05-19T02:38:13.000Z</published>
+    <updated>2019-05-19T02:40:52.985Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="VSCode前端开发插件配置"><a href="#VSCode前端开发插件配置" class="headerlink" title="VSCode前端开发插件配置"></a>VSCode前端开发插件配置</h1><p>作为前端开发人员，拥有一款适合自己的编辑器无异于如虎添翼，之前经常使用SumlimeText的我首次试用VSCode就有一种心动的感觉。VSCode这款免费的编辑器颜值够高，合理配置插件后也可以媲美WebStorm这种硬核的编辑器，那么你还有什么理由拒绝它呢。</p><p>每每上手新的编辑器，我都会根据自己的开发习惯把它调较到理想状态，加上熟悉编辑器各种特性，这个过程通常需要几周的时间。接下来，我就从外观配置、风格检查、编码效率、功能增强等 4 方面来侃侃怎么配置 VSCode 来提高工作幸福感。</p><h2 id="外观配置"><a href="#外观配置" class="headerlink" title="外观配置"></a>外观配置</h2><p>作为前端开发者，外观当然是最先考虑的部分，从配置的角度，无非是配色、图标、字体等，俗话说萝卜白菜各有所爱，我目前的配色、图标字体如下：</p><ul><li>配色：One Dark Pro，在VSCode Extensions中搜索One Dark Pro安装即可</li><li>图标：Material Icon Theme，给不同类型的文件配置不同的图标，非常直观；</li><li>字体：Fira Code，自从发现并开始使用 Fira Code，我就再也没多看自其它字体一眼，字体如果比较优雅，尤其是对数学运算符的处理</li><li><h2 id="风格检查"><a href="#风格检查" class="headerlink" title="风格检查"></a>风格检查</h2></li><li><p>保障优秀一致的代码风格是一个程序员的高尚品质，如果编辑器在编码时实时给出反馈，对开发者个人而言才是最高效的，在提交时做强制检查只是从团队的视角保证编码风格的规范性和一致性。前端工程师会书写的代码无非是：HTML、CSS、Javascript、Markdown、TypeScript、JSON，对应的 Lint 工具就显而易见：</p></li><li>ESLint：插件式架构，有多种主流的编码风格规则集可供选择，典型的有 Airbnb、Google 等</li><li>StyleLint，同样插件式架构的样式检查工具</li><li>TSLint：编写TypeScript你会想用到它的 </li><li>MarkdownLint：Markdown 如果不合法，可能在某些场合导致解析器异常，因为 Markdown 有好几套标准，在不同标准间部分语法支持可能是不兼容的；</li></ul><p>有了风格检查，自然就会产生按配置好的风格规则做文件格式化的需求，另外推荐一款好用的格式化工具：Prettier，实际上已经是代码格式化的工具标准，支持格式化几乎所有的前端代码，并且类似于 EditorConfig 支持用文件来配置格式规则；</p><h2 id="编码效率"><a href="#编码效率" class="headerlink" title="编码效率"></a>编码效率</h2><p>说到编码效率，当你感觉击键的速率已经赶不上自己的思维时就需要在编码时设置适当的快捷键，组合使用智能建议、代码片段、自动补全来达到速度的最大化。重点说说代码片段和自动补全两个效率提升利器。代码片段英文叫做 Snippets，市面上主流的编辑器也都支持，其基本思想就是把常见的代码模式抽出来，通过 2~3 个键就能展开 N 行代码，代码片段的积累一方面是根据个人习惯，另一方面是学习社区里面积累出来的好的编码模式，如果觉得不适合你，可以改（找个现有的插件依葫芦画瓢）</p><h3 id="常用的代码片段插件"><a href="#常用的代码片段插件" class="headerlink" title="常用的代码片段插件"></a>常用的代码片段插件</h3><ul><li>HTML Snippets，各种 HTML 标签片段，如果你 Emmet 玩的熟，完全可以忽略这个</li><li>Javascript (ES6) Code Snippets，常用的类声明、ES 模块声明、CMD 模块导入等，支持的缩写不下 20 种</li><li>Javascript Patterns Snippets，常见的编码模式，比如 IIFE；自动补全自动补全本质上和代码片段类似，不过是在特殊场合下以你的键入做为启发式信息提供最有可能要输入的建议</li></ul><h3 id="常用的自动补全工具"><a href="#常用的自动补全工具" class="headerlink" title="常用的自动补全工具"></a>常用的自动补全工具</h3><ul><li>Auto Close Tag，适用于 JSX、Vue、HTML，在打开标签并且键入 &lt;/ 的时候，能自动补全要闭合的标签；</li><li>Auto Rename Tag，适用于 JSX、Vue、HTML，在修改标签名时，能在你修改开始（结束）标签的时候修改对应的结束（开始）标签，帮你减少 50% 的击键</li><li>Path Intellisense，文件路径补全，在你用任何方式引入文件系统中的路径时提供智能提示和自动完成；NPM Intellisense，NPM 依赖补全，在你引入任何 node_modules 里面的依赖包时提供智能提示和自动完成</li><li>IntelliSense for CSS class names，CSS 类名补全，会自动扫描整个项目里面的 CSS 类名并在你输入类名时做智能提示</li><li>Emmet，以前叫做 Zen Coding，我发现后，也是爱不释手，可以把类 CSS 选择符的字符串展开成 HTML 标签，VSCode 已经内置，官方介绍文档参见，你需要做的就是熟悉他的语法，并勤加练习</li></ul><h3 id="TODO-Highlight"><a href="#TODO-Highlight" class="headerlink" title="TODO Highlight"></a>TODO Highlight</h3><p>维护时间稍长的代码仓库免不了会有各种 TODO、FIXME、HACK 之类的标记，TODO Highlight 能够帮我们把这些关键词高亮出来，在你翻阅代码时非常醒目，就像是在大声提醒你尽快把他解决掉。支持自定义配置需要高亮的关键词，实际使用比较坑的地方是，TODO、FIXME 之类的后面必须加上冒号，否则无法高亮。</p><p>功能增强在效率提升方面除了上面的代码片段、自动补全之外，我还安装了下面几个插件，方便快速的浏览和理解代码，并且在不同项目之间切换。</p><ul><li>Color Highlight，识别代码中的颜色，包括各种颜色格式；</li><li>Bracket Pair Colorizer，识别代码中的各种括号，并且标记上不同的颜色，方便你扫视到匹配的括号，在括号使用非常多的情况下能环节眼部压力，编辑器快捷键固然好用，但是在临近嵌套多的情况下却有些力不从心；</li><li>Project Manager，项目管理，让我们方便的在命令面板中切换项目文件夹，当然，你也可以直接打开包含多个项目的父级文件夹，但这样可能会让 VSCode 变慢；</li></ul><h2 id="不同设备同步VSCode配置"><a href="#不同设备同步VSCode配置" class="headerlink" title="不同设备同步VSCode配置"></a>不同设备同步VSCode配置</h2><h3 id="Settings-Sync"><a href="#Settings-Sync" class="headerlink" title="Settings Sync"></a>Settings Sync</h3><p>Settings Sync 基于 Gist 实现 VSCode 用户配置、快捷键配置、已安装插件列表等的备份和恢复功能，配置过程有详细精确的操作步骤文档。生成的备份 Gist 默认是私密的，如果你想设置为共享的，也可以一键切换。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;VSCode前端开发插件配置&quot;&gt;&lt;a href=&quot;#VSCode前端开发插件配置&quot; class=&quot;headerlink&quot; title=&quot;VSCode前端开发插件配置&quot;&gt;&lt;/a&gt;VSCode前端开发插件配置&lt;/h1&gt;&lt;p&gt;作为前端开发人员，拥有一款适合自己的编辑器无
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="VSCode" scheme="http://yoursite.com/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS进阶笔记</title>
     <link href="http://yoursite.com/2019/05/19/CSS%E8%BF%9B%E9%98%B6%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2019/05/19/CSS进阶笔记/</id>
     <published>2019-05-19T00:49:29.000Z</published>
-    <updated>2019-05-19T00:51:26.971Z</updated>
+    <updated>2019-05-19T05:11:12.031Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="标准流Normal-Flow"><a href="#标准流Normal-Flow" class="headerlink" title="标准流Normal Flow"></a>标准流Normal Flow</h1><h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h3><ul><li><p>宽度固定：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line"> <span class="attribute">margin-left</span>: auto;</span><br><span class="line">    <span class="attribute">margin-right</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>宽度不固定：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h3 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h3><p>设置内联元素的父元素text-align属性：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span>&#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h2><p>不兼容IE时，可以使用flex布局简单实现：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>兼容IE时，可以使用table布局</p><h2 id="文字溢出省略"><a href="#文字溢出省略" class="headerlink" title="文字溢出省略"></a>文字溢出省略</h2><ul><li><p>单行文字溢出省略：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><ul><li><p>多行文字溢出省略：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">     <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">     <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>; <span class="comment">/*在这里设置行数*/</span></span><br><span class="line">     <span class="attribute">-webkit-box-orient</span>: vertical; </span><br><span class="line">     <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><h3 id="盒模型分类：W3C标准盒模型和IE盒模型"><a href="#盒模型分类：W3C标准盒模型和IE盒模型" class="headerlink" title="盒模型分类：W3C标准盒模型和IE盒模型"></a>盒模型分类：W3C标准盒模型和IE盒模型</h3><p> 盒模型分为W3C标准盒模型和IE盒模型。在ie8+浏览器中使用哪个盒模型可以由<strong>box-sizing</strong>(CSS新增的属性)控制，默认值为content-box，即标准盒模型；如果将box-sizing设为border-box则用的是IE盒模型。如果在ie6,7,8中DOCTYPE缺失会触发IE模式。在当前W3C标准中盒模型是可以通过box-sizing自由的进行切换的。</p><ol><li>W3C标准盒模型：属性width和height只包含content,不包含padding和border</li><li>IE盒模型：属性width,height包含border和padding，指的是content+padding+border。</li></ol><h3 id="调试方法"><a href="#调试方法" class="headerlink" title="调试方法"></a>调试方法</h3><p>要学会使用border进行CSS的调试，可以说不会border调试方法就不要写CSS啦~.~</p><h3 id="实现一个宽度自适应的1-1的div"><a href="#实现一个宽度自适应的1-1的div" class="headerlink" title="实现一个宽度自适应的1:1的div"></a>实现一个宽度自适应的1:1的div</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;标准流Normal-Flow&quot;&gt;&lt;a href=&quot;#标准流Normal-Flow&quot; class=&quot;headerlink&quot; title=&quot;标准流Normal Flow&quot;&gt;&lt;/a&gt;标准流Normal Flow&lt;/h1&gt;&lt;h2 id=&quot;水平居中&quot;&gt;&lt;a href=&quot;#水
+      
     
     </summary>
     

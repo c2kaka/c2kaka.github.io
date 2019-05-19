@@ -19,7 +19,11 @@
     <meta name="keywords" content="前端">
 
 
-    <meta name="description" content="kaka的博客">
+    <meta name="description" content="标准流Normal Flow水平居中块级元素
+宽度固定：
+1234div&#123; 	margin-left: auto;    margin-right: auto;&#125;
+
+宽度不固...">
 
 
 
@@ -174,7 +178,37 @@
     </div>
     
     <div class="post-body post-content">
-        
+        <h1 id="标准流Normal-Flow"><a href="#标准流Normal-Flow" class="headerlink" title="标准流Normal Flow"></a>标准流Normal Flow</h1><h2 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h2><h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h3><ul>
+<li><p>宽度固定：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line"> 	<span class="attribute">margin-left</span>: auto;</span><br><span class="line">    <span class="attribute">margin-right</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>宽度不固定：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h3><p>设置内联元素的父元素text-align属性：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span>&#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h2><p>不兼容IE时，可以使用flex布局简单实现：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>兼容IE时，可以使用table布局</p>
+<h2 id="文字溢出省略"><a href="#文字溢出省略" class="headerlink" title="文字溢出省略"></a>文字溢出省略</h2><ul>
+<li><p>单行文字溢出省略：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>多行文字溢出省略：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">     <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">     <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>; <span class="comment">/*在这里设置行数*/</span></span><br><span class="line">     <span class="attribute">-webkit-box-orient</span>: vertical; </span><br><span class="line">     <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><h3 id="盒模型分类：W3C标准盒模型和IE盒模型"><a href="#盒模型分类：W3C标准盒模型和IE盒模型" class="headerlink" title="盒模型分类：W3C标准盒模型和IE盒模型"></a>盒模型分类：W3C标准盒模型和IE盒模型</h3><p> 盒模型分为W3C标准盒模型和IE盒模型。在ie8+浏览器中使用哪个盒模型可以由<strong>box-sizing</strong>(CSS新增的属性)控制，默认值为content-box，即标准盒模型；如果将box-sizing设为border-box则用的是IE盒模型。如果在ie6,7,8中DOCTYPE缺失会触发IE模式。在当前W3C标准中盒模型是可以通过box-sizing自由的进行切换的。</p>
+<ol>
+<li>W3C标准盒模型：属性width和height只包含content,不包含padding和border</li>
+<li>IE盒模型：属性width,height包含border和padding，指的是content+padding+border。</li>
+</ol>
+<h3 id="调试方法"><a href="#调试方法" class="headerlink" title="调试方法"></a>调试方法</h3><p>要学会使用border进行CSS的调试，可以说不会border调试方法就不要写CSS啦~.~</p>
+<h3 id="实现一个宽度自适应的1-1的div"><a href="#实现一个宽度自适应的1-1的div" class="headerlink" title="实现一个宽度自适应的1:1的div"></a>实现一个宽度自适应的1:1的div</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
     
     <div class="post-footer">
@@ -190,6 +224,11 @@
 </article>
 
 <div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2019/05/19/VSCode前端开发插件配置/" class="pre-post btn btn-default" title="VSCode前端开发插件配置">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">VSCode前端开发插件配置</span>
+        </a>
     
     
         <a href="/2019/05/09/CSS学习笔记/" class="next-post btn btn-default" title="CSS学习笔记">
@@ -237,7 +276,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#标准流Normal-Flow"><span class="toc-text">标准流Normal Flow</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#水平居中"><span class="toc-text">水平居中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#块级元素"><span class="toc-text">块级元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内联元素"><span class="toc-text">内联元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#垂直居中"><span class="toc-text">垂直居中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文字溢出省略"><span class="toc-text">文字溢出省略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#盒模型"><span class="toc-text">盒模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#盒模型分类：W3C标准盒模型和IE盒模型"><span class="toc-text">盒模型分类：W3C标准盒模型和IE盒模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试方法"><span class="toc-text">调试方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现一个宽度自适应的1-1的div"><span class="toc-text">实现一个宽度自适应的1:1的div</span></a></li></ol></li></ol></li></ol>
         
     </div>
 </aside>

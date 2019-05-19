@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="欧阳帆">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="VSCode">
+
+
+    <meta name="description" content="VSCode前端开发插件配置作为前端开发人员，拥有一款适合自己的编辑器无异于如虎添翼，之前经常使用SumlimeText的我首次试用VSCode就有一种心动的感觉。VSCode这款免费的编辑器颜...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>VSCode前端开发插件配置 | 欧阳帆</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="欧阳帆" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="kaka">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 不积跬步无以至千里 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">欧阳帆</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="VSCode前端开发插件配置">
+            
+	            VSCode前端开发插件配置
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/工具/">工具</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/VSCode/">VSCode</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/05/19</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="VSCode前端开发插件配置"><a href="#VSCode前端开发插件配置" class="headerlink" title="VSCode前端开发插件配置"></a>VSCode前端开发插件配置</h1><p>作为前端开发人员，拥有一款适合自己的编辑器无异于如虎添翼，之前经常使用SumlimeText的我首次试用VSCode就有一种心动的感觉。VSCode这款免费的编辑器颜值够高，合理配置插件后也可以媲美WebStorm这种硬核的编辑器，那么你还有什么理由拒绝它呢。</p>
+<p>每每上手新的编辑器，我都会根据自己的开发习惯把它调较到理想状态，加上熟悉编辑器各种特性，这个过程通常需要几周的时间。接下来，我就从外观配置、风格检查、编码效率、功能增强等 4 方面来侃侃怎么配置 VSCode 来提高工作幸福感。</p>
+<h2 id="外观配置"><a href="#外观配置" class="headerlink" title="外观配置"></a>外观配置</h2><p>作为前端开发者，外观当然是最先考虑的部分，从配置的角度，无非是配色、图标、字体等，俗话说萝卜白菜各有所爱，我目前的配色、图标字体如下：</p>
+<ul>
+<li>配色：One Dark Pro，在VSCode Extensions中搜索One Dark Pro安装即可</li>
+<li>图标：Material Icon Theme，给不同类型的文件配置不同的图标，非常直观；</li>
+<li>字体：Fira Code，自从发现并开始使用 Fira Code，我就再也没多看自其它字体一眼，字体如果比较优雅，尤其是对数学运算符的处理</li>
+<li><h2 id="风格检查"><a href="#风格检查" class="headerlink" title="风格检查"></a>风格检查</h2></li>
+<li><p>保障优秀一致的代码风格是一个程序员的高尚品质，如果编辑器在编码时实时给出反馈，对开发者个人而言才是最高效的，在提交时做强制检查只是从团队的视角保证编码风格的规范性和一致性。前端工程师会书写的代码无非是：HTML、CSS、Javascript、Markdown、TypeScript、JSON，对应的 Lint 工具就显而易见：</p>
+</li>
+<li>ESLint：插件式架构，有多种主流的编码风格规则集可供选择，典型的有 Airbnb、Google 等</li>
+<li>StyleLint，同样插件式架构的样式检查工具</li>
+<li>TSLint：编写TypeScript你会想用到它的 </li>
+<li>MarkdownLint：Markdown 如果不合法，可能在某些场合导致解析器异常，因为 Markdown 有好几套标准，在不同标准间部分语法支持可能是不兼容的；</li>
+</ul>
+<p>有了风格检查，自然就会产生按配置好的风格规则做文件格式化的需求，另外推荐一款好用的格式化工具：Prettier，实际上已经是代码格式化的工具标准，支持格式化几乎所有的前端代码，并且类似于 EditorConfig 支持用文件来配置格式规则；</p>
+<h2 id="编码效率"><a href="#编码效率" class="headerlink" title="编码效率"></a>编码效率</h2><p>说到编码效率，当你感觉击键的速率已经赶不上自己的思维时就需要在编码时设置适当的快捷键，组合使用智能建议、代码片段、自动补全来达到速度的最大化。重点说说代码片段和自动补全两个效率提升利器。代码片段英文叫做 Snippets，市面上主流的编辑器也都支持，其基本思想就是把常见的代码模式抽出来，通过 2~3 个键就能展开 N 行代码，代码片段的积累一方面是根据个人习惯，另一方面是学习社区里面积累出来的好的编码模式，如果觉得不适合你，可以改（找个现有的插件依葫芦画瓢）</p>
+<h3 id="常用的代码片段插件"><a href="#常用的代码片段插件" class="headerlink" title="常用的代码片段插件"></a>常用的代码片段插件</h3><ul>
+<li>HTML Snippets，各种 HTML 标签片段，如果你 Emmet 玩的熟，完全可以忽略这个</li>
+<li>Javascript (ES6) Code Snippets，常用的类声明、ES 模块声明、CMD 模块导入等，支持的缩写不下 20 种</li>
+<li>Javascript Patterns Snippets，常见的编码模式，比如 IIFE；自动补全自动补全本质上和代码片段类似，不过是在特殊场合下以你的键入做为启发式信息提供最有可能要输入的建议</li>
+</ul>
+<h3 id="常用的自动补全工具"><a href="#常用的自动补全工具" class="headerlink" title="常用的自动补全工具"></a>常用的自动补全工具</h3><ul>
+<li>Auto Close Tag，适用于 JSX、Vue、HTML，在打开标签并且键入 &lt;/ 的时候，能自动补全要闭合的标签；</li>
+<li>Auto Rename Tag，适用于 JSX、Vue、HTML，在修改标签名时，能在你修改开始（结束）标签的时候修改对应的结束（开始）标签，帮你减少 50% 的击键</li>
+<li>Path Intellisense，文件路径补全，在你用任何方式引入文件系统中的路径时提供智能提示和自动完成；NPM Intellisense，NPM 依赖补全，在你引入任何 node_modules 里面的依赖包时提供智能提示和自动完成</li>
+<li>IntelliSense for CSS class names，CSS 类名补全，会自动扫描整个项目里面的 CSS 类名并在你输入类名时做智能提示</li>
+<li>Emmet，以前叫做 Zen Coding，我发现后，也是爱不释手，可以把类 CSS 选择符的字符串展开成 HTML 标签，VSCode 已经内置，官方介绍文档参见，你需要做的就是熟悉他的语法，并勤加练习</li>
+</ul>
+<h3 id="TODO-Highlight"><a href="#TODO-Highlight" class="headerlink" title="TODO Highlight"></a>TODO Highlight</h3><p>维护时间稍长的代码仓库免不了会有各种 TODO、FIXME、HACK 之类的标记，TODO Highlight 能够帮我们把这些关键词高亮出来，在你翻阅代码时非常醒目，就像是在大声提醒你尽快把他解决掉。支持自定义配置需要高亮的关键词，实际使用比较坑的地方是，TODO、FIXME 之类的后面必须加上冒号，否则无法高亮。</p>
+<p>功能增强在效率提升方面除了上面的代码片段、自动补全之外，我还安装了下面几个插件，方便快速的浏览和理解代码，并且在不同项目之间切换。</p>
+<ul>
+<li>Color Highlight，识别代码中的颜色，包括各种颜色格式；</li>
+<li>Bracket Pair Colorizer，识别代码中的各种括号，并且标记上不同的颜色，方便你扫视到匹配的括号，在括号使用非常多的情况下能环节眼部压力，编辑器快捷键固然好用，但是在临近嵌套多的情况下却有些力不从心；</li>
+<li>Project Manager，项目管理，让我们方便的在命令面板中切换项目文件夹，当然，你也可以直接打开包含多个项目的父级文件夹，但这样可能会让 VSCode 变慢；</li>
+</ul>
+<h2 id="不同设备同步VSCode配置"><a href="#不同设备同步VSCode配置" class="headerlink" title="不同设备同步VSCode配置"></a>不同设备同步VSCode配置</h2><h3 id="Settings-Sync"><a href="#Settings-Sync" class="headerlink" title="Settings Sync"></a>Settings Sync</h3><p>Settings Sync 基于 Gist 实现 VSCode 用户配置、快捷键配置、已安装插件列表等的备份和恢复功能，配置过程有详细精确的操作步骤文档。生成的备份 Gist 默认是私密的，如果你想设置为共享的，也可以一键切换。</p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2019/05/19/CSS进阶笔记/" class="next-post btn btn-default" title="CSS进阶笔记">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">CSS进阶笔记</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#VSCode前端开发插件配置"><span class="toc-text">VSCode前端开发插件配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#外观配置"><span class="toc-text">外观配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#风格检查"><span class="toc-text">风格检查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编码效率"><span class="toc-text">编码效率</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的代码片段插件"><span class="toc-text">常用的代码片段插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的自动补全工具"><span class="toc-text">常用的自动补全工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TODO-Highlight"><span class="toc-text">TODO Highlight</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不同设备同步VSCode配置"><span class="toc-text">不同设备同步VSCode配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Settings-Sync"><span class="toc-text">Settings Sync</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>

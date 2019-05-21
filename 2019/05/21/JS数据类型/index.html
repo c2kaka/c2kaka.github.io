@@ -1,0 +1,519 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="欧阳帆">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="JavaScript">
+
+
+    <meta name="description" content="JS数据类型1.数据类型概述JS的数据类型共有七种：
+
+number(数值)：整数和小数（比如1和3.14）
+
+string(字符串)：文本（比如 hello world）
+
+boolean(布...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>JS数据类型 | 欧阳帆</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="欧阳帆" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="kaka">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 不积跬步无以至千里 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">欧阳帆</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="JS数据类型">
+            
+	            JS数据类型
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/05/21</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h1 id="JS数据类型"><a href="#JS数据类型" class="headerlink" title="JS数据类型"></a>JS数据类型</h1><h2 id="1-数据类型概述"><a href="#1-数据类型概述" class="headerlink" title="1.数据类型概述"></a>1.数据类型概述</h2><p>JS的数据类型共有七种：</p>
+<ul>
+<li><p><code>number</code>(数值)：整数和小数（比如1和3.14）</p>
+</li>
+<li><p><code>string</code>(字符串)：文本（比如 hello world）</p>
+</li>
+<li><p><code>boolean</code>(布尔值)：true和false</p>
+</li>
+<li><p><code>object</code>(对象)：各种值的集合</p>
+</li>
+<li><p><code>undefined</code>：表示“未定义”或者不存在</p>
+</li>
+<li><p><code>null</code>：表示空值</p>
+</li>
+<li><p><code>symbol</code>：es6新增</p>
+</li>
+</ul>
+<p><code>number</code>、<code>string</code>、<code>boolean</code>这三种类型合称为原始类型的值，即是最基本的数据类型，不能再细分了。而object被称为合成类型的值，即是各种值的集合。至于<code>undefined</code>和<code>null</code>可以看成两个特殊的值。</p>
+<h2 id="2-null-和-undefined"><a href="#2-null-和-undefined" class="headerlink" title="2.null 和 undefined"></a>2.null 和 undefined</h2><h3 id="2-1概述"><a href="#2-1概述" class="headerlink" title="2.1概述"></a>2.1概述</h3><p><code>null</code>与<code>undefined</code>都可以表示“没有”，含义非常相似。将一个变量赋值为<code>undefined</code>或<code>null</code>，老实说，语法效果几乎没区别。在<code>if</code>语句中，它们都会被自动转为<code>false</code>，相等运算符（<code>==</code>）甚至直接报告两者相等。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!<span class="literal">undefined</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'undefined is false'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// undefined is false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!<span class="literal">null</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'null is false'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// null is false</span></span><br><span class="line"></span><br><span class="line"><span class="literal">undefined</span> == <span class="literal">null</span></span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-2用法和含义"><a href="#2-2用法和含义" class="headerlink" title="2.2用法和含义"></a>2.2用法和含义</h3><p>当你声明一个对象而又不想立即赋值时，可以将对象设为<code>null</code>，表示空值；而当你声明一个原始类型的值而又不想立即赋值时，可以用<code>undefined</code>。</p>
+<h2 id="3-boolean"><a href="#3-boolean" class="headerlink" title="3.boolean"></a>3.boolean</h2><p>如果 JavaScript 预期某个位置应该是布尔值，会将该位置上现有的值自动转为布尔值。转换规则是除了下面六个值被转为<code>false</code>，其他值都视为<code>true</code>。</p>
+<ul>
+<li><p><code>undefined</code></p>
+</li>
+<li><p><code>null</code></p>
+</li>
+<li><p><code>false</code></p>
+</li>
+<li><p><code>0</code></p>
+</li>
+<li><p><code>NaN</code></p>
+</li>
+<li><p><code>&quot;&quot;</code>或<code>&#39;&#39;</code>（空字符串）</p>
+</li>
+</ul>
+<h2 id="4-number"><a href="#4-number" class="headerlink" title="4.number"></a>4.number</h2><h3 id="4-1整数和浮点数"><a href="#4-1整数和浮点数" class="headerlink" title="4.1整数和浮点数"></a>4.1整数和浮点数</h3><p>JavaScript 内部，所有数字都是以64位浮点数形式储存，即使整数也是如此。所以，<code>1</code>与<code>1.0</code>是相同的，是同一个数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> === <span class="number">1.0</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>这就是说，JavaScript 语言的底层根本没有整数，所有数字都是小数（64位浮点数）。容易造成混淆的是，某些运算只有整数才能完成，此时 JavaScript 会自动把64位浮点数，转成32位整数，然后再进行运算。</p>
+<p>由于浮点数不是精确的值，所以涉及小数的比较和运算要特别小心。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.1</span> + <span class="number">0.2</span> === <span class="number">0.3</span></span><br><span class="line"><span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="number">0.3</span> / <span class="number">0.1</span></span><br><span class="line"><span class="comment">// 2.9999999999999996</span></span><br><span class="line"></span><br><span class="line">(<span class="number">0.3</span> - <span class="number">0.2</span>) === (<span class="number">0.2</span> - <span class="number">0.1</span>)</span><br><span class="line"><span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-2数值范围"><a href="#4-2数值范围" class="headerlink" title="4.2数值范围"></a>4.2数值范围</h3><p>根据标准，64位浮点数的指数部分的长度是11个二进制位，意味着指数部分的最大值是2047（2的11次方减1）。也就是说，64位浮点数的指数部分的值最大为2047，分出一半表示负数，则 JavaScript 能够表示的数值范围为21024到2-1023（开区间），超出这个范围的数无法表示。</p>
+<p>如果一个数大于等于2的1024次方，那么就会发生“正向溢出”，即 JavaScript 无法表示这么大的数，这时就会返回<code>Infinity</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">1024</span>) <span class="comment">// Infinity</span></span><br></pre></td></tr></table></figure>
+<p>如果一个数小于等于2的-1075次方（指数部分最小值-1023，再加上小数部分的52位），那么就会发生为“负向溢出”，即 JavaScript 无法表示这么小的数，这时会直接返回0。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">-1075</span>) <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-3进制"><a href="#4-3进制" class="headerlink" title="4.3进制"></a>4.3进制</h3><p>JavaScript 对整数提供四种进制的表示方法：十进制、十六进制、八进制、二进制。</p>
+<ul>
+<li>十进制：没有前导0的数值。</li>
+<li>八进制：有前缀<code>0o</code>或<code>0O</code>的数值，或者有前导0、且只用到0-7的八个阿拉伯数字的数值。</li>
+<li>十六进制：有前缀<code>0x</code>或<code>0X</code>的数值。</li>
+<li>二进制：有前缀<code>0b</code>或<code>0B</code>的数值。</li>
+</ul>
+<h3 id="4-4NaN"><a href="#4-4NaN" class="headerlink" title="4.4NaN"></a>4.4NaN</h3><h4 id="4-4-1含义"><a href="#4-4-1含义" class="headerlink" title="4.4.1含义"></a>4.4.1含义</h4><p><code>NaN</code>是 JavaScript 的特殊值，表示“非数字”（Not a Number），主要出现在将字符串解析成数字出错的场合。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> - <span class="string">'x'</span> <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>上面代码运行时，会自动将字符串<code>x</code>转为数值，但是由于<code>x</code>不是数值，所以最后得到结果为<code>NaN</code>，表示它是“非数字”（<code>NaN</code>）。</p>
+<p>另外，一些数学函数的运算结果会出现<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.acos(<span class="number">2</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.log(<span class="number">-1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Math</span>.sqrt(<span class="number">-1</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p><code>0</code>除以<code>0</code>也会得到<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> / <span class="number">0</span> <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，<code>NaN</code>不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于<code>Number</code>，使用<code>typeof</code>运算符可以看得很清楚。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="literal">NaN</span> <span class="comment">// 'number'</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-4-2运算规则"><a href="#4-4-2运算规则" class="headerlink" title="4.4.2运算规则"></a>4.4.2运算规则</h4><p><code>NaN</code>不等于任何值，包括它本身。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">NaN</span> === <span class="literal">NaN</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>数组的<code>indexOf</code>方法内部使用的是严格相等运算符，所以该方法对<code>NaN</code>不成立。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="literal">NaN</span>].indexOf(<span class="literal">NaN</span>) <span class="comment">// -1</span></span><br></pre></td></tr></table></figure>
+<p><code>NaN</code>在布尔运算时被当作<code>false</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Boolean</span>(<span class="literal">NaN</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p><code>NaN</code>与任何数（包括它自己）的运算，得到的都是<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">NaN</span> + <span class="number">32</span> <span class="comment">// NaN</span></span><br><span class="line"><span class="literal">NaN</span> - <span class="number">32</span> <span class="comment">// NaN</span></span><br><span class="line"><span class="literal">NaN</span> * <span class="number">32</span> <span class="comment">// NaN</span></span><br><span class="line"><span class="literal">NaN</span> / <span class="number">32</span> <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-5parseInt"><a href="#4-5parseInt" class="headerlink" title="4.5parseInt()"></a>4.5parseInt()</h3><h4 id="4-5-1基本用法"><a href="#4-5-1基本用法" class="headerlink" title="4.5.1基本用法"></a>4.5.1基本用法</h4><p><code>parseInt</code>方法用于将字符串转为整数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'123'</span>) <span class="comment">// 123</span></span><br></pre></td></tr></table></figure>
+<p>如果字符串头部有空格，空格会被自动去除。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'   81'</span>) <span class="comment">// 81</span></span><br></pre></td></tr></table></figure>
+<p>如果<code>parseInt</code>的参数不是字符串，则会先转为字符串再转换。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="number">1.23</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1.23'</span>) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>字符串转为整数的时候，是一个个字符依次转换，如果遇到不能转为数字的字符，就不再进行下去，返回已经转好的部分。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'8a'</span>) <span class="comment">// 8</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'12**'</span>) <span class="comment">// 12</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'12.34'</span>) <span class="comment">// 12</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'15e2'</span>) <span class="comment">// 15</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'15px'</span>) <span class="comment">// 15</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>parseInt</code>的参数都是字符串，结果只返回字符串头部可以转为数字的部分。</p>
+<p>如果字符串的第一个字符不能转化为数字（后面跟着数字的正负号除外），返回<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'abc'</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'.3'</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">''</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'+'</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'+1'</span>) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>所以，<code>parseInt</code>的返回值只有两种可能，要么是一个十进制整数，要么是<code>NaN</code>。</p>
+<p>如果字符串以<code>0x</code>或<code>0X</code>开头，<code>parseInt</code>会将其按照十六进制数解析。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'0x10'</span>) <span class="comment">// 16</span></span><br></pre></td></tr></table></figure>
+<p>如果字符串以<code>0</code>开头，将其按照10进制解析。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'011'</span>) <span class="comment">// 11</span></span><br></pre></td></tr></table></figure>
+<p>对于那些会自动转为科学计数法的数字，<code>parseInt</code>会将科学计数法的表示方法视为字符串，因此导致一些奇怪的结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="number">1000000000000000000000.5</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1e+21'</span>) <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">0.0000008</span>) <span class="comment">// 8</span></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'8e-7'</span>) <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-5-2进制转换"><a href="#4-5-2进制转换" class="headerlink" title="4.5.2进制转换"></a>4.5.2进制转换</h4><p><code>parseInt</code>方法还可以接受第二个参数（2到36之间），表示被解析的值的进制，返回该值对应的十进制数。默认情况下，<code>parseInt</code>的第二个参数为10，即默认是十进制转十进制。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1000'</span>) <span class="comment">// 1000</span></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1000'</span>, <span class="number">10</span>) <span class="comment">// 1000</span></span><br></pre></td></tr></table></figure>
+<p>下面是转换指定进制的数的例子。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1000'</span>, <span class="number">2</span>) <span class="comment">// 8</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1000'</span>, <span class="number">6</span>) <span class="comment">// 216</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1000'</span>, <span class="number">8</span>) <span class="comment">// 512</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，二进制、六进制、八进制的<code>1000</code>，分别等于十进制的8、216和512。这意味着，可以用<code>parseInt</code>方法进行进制的转换。</p>
+<p>如果第二个参数不是数值，会被自动转为一个整数。这个整数只有在2到36之间，才能得到有意义的结果，超出这个范围，则返回<code>NaN</code>。如果第二个参数是<code>0</code>、<code>undefined</code>和<code>null</code>，则直接忽略。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="number">37</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="number">1</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="number">0</span>) <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="literal">null</span>) <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'10'</span>, <span class="literal">undefined</span>) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+<p>如果字符串包含对于指定进制无意义的字符，则从最高位开始，只返回可以转换的数值。如果最高位无法转换，则直接返回<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1546'</span>, <span class="number">2</span>) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'546'</span>, <span class="number">2</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对于二进制来说，<code>1</code>是有意义的字符，<code>5</code>、<code>4</code>、<code>6</code>都是无意义的字符，所以第一行返回1，第二行返回<code>NaN</code>。</p>
+<p>前面说过，如果<code>parseInt</code>的第一个参数不是字符串，会被先转为字符串。这会导致一些令人意外的结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="number">0x11</span>, <span class="number">36</span>) <span class="comment">// 43</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">0x11</span>, <span class="number">2</span>) <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="built_in">String</span>(<span class="number">0x11</span>), <span class="number">36</span>)</span><br><span class="line"><span class="built_in">parseInt</span>(<span class="built_in">String</span>(<span class="number">0x11</span>), <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'17'</span>, <span class="number">36</span>)</span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'17'</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>上面代码中，十六进制的<code>0x11</code>会被先转为十进制的17，再转为字符串。然后，再用36进制或二进制解读字符串<code>17</code>，最后返回结果<code>43</code>和<code>1</code>。</p>
+<p>这种处理方式，对于八进制的前缀0，尤其需要注意。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="number">011</span>, <span class="number">2</span>) <span class="comment">// NaN</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="built_in">String</span>(<span class="number">011</span>), <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="built_in">String</span>(<span class="number">9</span>), <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>上面代码中，第一行的<code>011</code>会被先转为字符串<code>9</code>，因为<code>9</code>不是二进制的有效字符，所以返回<code>NaN</code>。如果直接计算<code>parseInt(&#39;011&#39;, 2)</code>，<code>011</code>则是会被当作二进制处理，返回3。</p>
+<p>JavaScript 不再允许将带有前缀0的数字视为八进制数，而是要求忽略这个<code>0</code>。但是，为了保证兼容性，大部分浏览器并没有部署这一条规定。</p>
+<h3 id="4-6-parseFloat"><a href="#4-6-parseFloat" class="headerlink" title="4.6 parseFloat()"></a>4.6 parseFloat()</h3><p><code>parseFloat</code>方法用于将一个字符串转为浮点数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'3.14'</span>) <span class="comment">// 3.14</span></span><br></pre></td></tr></table></figure>
+<p>如果字符串符合科学计数法，则会进行相应的转换。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'314e-2'</span>) <span class="comment">// 3.14</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'0.0314E+2'</span>) <span class="comment">// 3.14</span></span><br></pre></td></tr></table></figure>
+<p>如果字符串包含不能转为浮点数的字符，则不再进行往后转换，返回已经转好的部分。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'3.14more non-digit characters'</span>) <span class="comment">// 3.14</span></span><br></pre></td></tr></table></figure>
+<p><code>parseFloat</code>方法会自动过滤字符串前导的空格。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'\t\v\r12.34\n '</span>) <span class="comment">// 12.34</span></span><br></pre></td></tr></table></figure>
+<p>如果参数不是字符串，或者字符串的第一个字符不能转化为浮点数，则返回<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>([]) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'FF2'</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">''</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，尤其值得注意，<code>parseFloat</code>会将空字符串转为<code>NaN</code>。</p>
+<p>这些特点使得<code>parseFloat</code>的转换结果不同于<code>Number</code>函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>(<span class="literal">true</span>)  <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="literal">true</span>) <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="literal">null</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="literal">null</span>) <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">''</span>) <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">''</span>) <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'123.45#'</span>) <span class="comment">// 123.45</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">'123.45#'</span>) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-6-isNaN"><a href="#4-6-isNaN" class="headerlink" title="4.6 isNaN()"></a>4.6 isNaN()</h3><p><code>isNaN</code>方法可以用来判断一个值是否为<code>NaN</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isNaN</span>(<span class="literal">NaN</span>) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="number">123</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>但是，<code>isNaN</code>只对数值有效，如果传入其他值，会被先转成数值。比如，传入字符串的时候，字符串会被先转成<code>NaN</code>，所以最后返回<code>true</code>，这一点要特别引起注意。也就是说，<code>isNaN</code>为<code>true</code>的值，有可能不是<code>NaN</code>，而是一个字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isNaN</span>(<span class="string">'Hello'</span>) <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 相当于</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="built_in">Number</span>(<span class="string">'Hello'</span>)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>出于同样的原因，对于对象和数组，<code>isNaN</code>也返回<code>true</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isNaN</span>(&#123;&#125;) <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="built_in">Number</span>(&#123;&#125;)) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">isNaN</span>([<span class="string">'xzy'</span>]) <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="built_in">Number</span>([<span class="string">'xzy'</span>])) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>但是，对于空数组和只有一个数值成员的数组，<code>isNaN</code>返回<code>false</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isNaN</span>([]) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">isNaN</span>([<span class="number">123</span>]) <span class="comment">// false</span></span><br><span class="line"><span class="built_in">isNaN</span>([<span class="string">'123'</span>]) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>上面代码之所以返回<code>false</code>，原因是这些数组能被<code>Number</code>函数转成数值，请参见《数据类型转换》一章。</p>
+<p>因此，使用<code>isNaN</code>之前，最好判断一下数据类型。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myIsNaN</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">typeof</span> value === <span class="string">'number'</span> &amp;&amp; <span class="built_in">isNaN</span>(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>判断<code>NaN</code>更可靠的方法是，利用<code>NaN</code>为唯一不等于自身的值的这个特点，进行判断。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myIsNaN</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> value !== value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-string"><a href="#5-string" class="headerlink" title="5.string"></a>5.string</h2><h3 id="5-1概述"><a href="#5-1概述" class="headerlink" title="5.1概述"></a>5.1概述</h3><p>字符串默认只能写在一行内，分成多行将会报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&apos;a</span><br><span class="line">b</span><br><span class="line">c&apos;</span><br><span class="line">// SyntaxError: Unexpected token ILLEGAL</span><br></pre></td></tr></table></figure>
+<p>上面代码将一个字符串分成三行，JavaScript 就会报错。</p>
+<p>如果长字符串必须分成多行，可以在每一行的尾部使用反斜杠。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> longString = <span class="string">'Long \</span></span><br><span class="line"><span class="string">long \</span></span><br><span class="line"><span class="string">long \</span></span><br><span class="line"><span class="string">string'</span>;</span><br><span class="line"></span><br><span class="line">longString</span><br><span class="line"><span class="comment">// "Long long long string"</span></span><br></pre></td></tr></table></figure>
+<p>上面代码表示，加了反斜杠以后，原来写在一行的字符串，可以分成多行书写。但是，输出的时候还是单行，效果与写在同一行完全一样。注意，反斜杠的后面必须是换行符，而不能有其他字符（比如空格），否则会报错。</p>
+<p>连接运算符（<code>+</code>）可以连接多个单行字符串，将长字符串拆成多行书写，输出的时候也是单行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> longString = <span class="string">'Long '</span></span><br><span class="line">  + <span class="string">'long '</span></span><br><span class="line">  + <span class="string">'long '</span></span><br><span class="line">  + <span class="string">'string'</span>;</span><br></pre></td></tr></table></figure>
+<p>es6中，可以使用反引号：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> longString = <span class="string">`a</span></span><br><span class="line"><span class="string">				  b</span></span><br><span class="line"><span class="string">				  c`</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-2字符串与数组"><a href="#5-2字符串与数组" class="headerlink" title="5.2字符串与数组"></a>5.2字符串与数组</h3><p>字符串可以被视为字符数组，因此可以使用数组的方括号运算符，用来返回某个位置的字符（位置编号从0开始）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">'hello'</span>;</span><br><span class="line">s[<span class="number">0</span>] <span class="comment">// "h"</span></span><br><span class="line">s[<span class="number">1</span>] <span class="comment">// "e"</span></span><br><span class="line">s[<span class="number">4</span>] <span class="comment">// "o"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 直接对字符串使用方括号运算符</span></span><br><span class="line"><span class="string">'hello'</span>[<span class="number">1</span>] <span class="comment">// "e"</span></span><br></pre></td></tr></table></figure>
+<p>如果方括号中的数字超过字符串的长度，或者方括号中根本不是数字，则返回<code>undefined</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'abc'</span>[<span class="number">3</span>] <span class="comment">// undefined</span></span><br><span class="line"><span class="string">'abc'</span>[<span class="number">-1</span>] <span class="comment">// undefined</span></span><br><span class="line"><span class="string">'abc'</span>[<span class="string">'x'</span>] <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>但是，字符串与数组的相似性仅此而已。实际上，无法改变字符串之中的单个字符。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">'hello'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> s[<span class="number">0</span>];</span><br><span class="line">s <span class="comment">// "hello"</span></span><br><span class="line"></span><br><span class="line">s[<span class="number">1</span>] = <span class="string">'a'</span>;</span><br><span class="line">s <span class="comment">// "hello"</span></span><br><span class="line"></span><br><span class="line">s[<span class="number">5</span>] = <span class="string">'!'</span>;</span><br><span class="line">s <span class="comment">// "hello"</span></span><br></pre></td></tr></table></figure>
+<p>上面代码表示，字符串内部的单个字符无法改变和增删，这些操作会默默地失败。</p>
+<p><code>length</code>属性返回字符串的长度，该属性也是无法改变的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">'hello'</span>;</span><br><span class="line">s.length <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line">s.length = <span class="number">3</span>;</span><br><span class="line">s.length <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line">s.length = <span class="number">7</span>;</span><br><span class="line">s.length <span class="comment">// 5</span></span><br></pre></td></tr></table></figure>
+<p>上面代码表示字符串的<code>length</code>属性无法改变，但是不会报错。</p>
+<h3 id="5-3字符集"><a href="#5-3字符集" class="headerlink" title="5.3字符集"></a>5.3字符集</h3><p>JavaScript 使用 Unicode 字符集。JavaScript 引擎内部，所有字符都用 Unicode 表示。</p>
+<p>JavaScript 不仅以 Unicode 储存字符，还允许直接在程序中使用 Unicode 码点表示字符，即将字符写成<code>\uxxxx</code>的形式，其中<code>xxxx</code>代表该字符的 Unicode 码点。比如，<code>\u00A9</code>代表版权符号。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">'\u00A9'</span>;</span><br><span class="line">s <span class="comment">// "©"</span></span><br></pre></td></tr></table></figure>
+<p>解析代码的时候，JavaScript 会自动识别一个字符是字面形式表示，还是 Unicode 形式表示。输出给用户的时候，所有字符都会转成字面形式。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> f\u006F\u006F = <span class="string">'abc'</span>;</span><br><span class="line">foo <span class="comment">// "abc"</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，第一行的变量名<code>foo</code>是 Unicode 形式表示，第二行是字面形式表示。JavaScript 会自动识别。</p>
+<p>我们还需要知道，每个字符在 JavaScript 内部都是以16位（即2个字节）的 UTF-16 格式储存。也就是说，JavaScript 的单位字符长度固定为16位长度，即2个字节。</p>
+<p>但是，UTF-16 有两种长度：对于码点在<code>U+0000</code>到<code>U+FFFF</code>之间的字符，长度为16位（即2个字节）；对于码点在<code>U+10000</code>到<code>U+10FFFF</code>之间的字符，长度为32位（即4个字节），而且前两个字节在<code>0xD800</code>到<code>0xDBFF</code>之间，后两个字节在<code>0xDC00</code>到<code>0xDFFF</code>之间。举例来说，码点<code>U+1D306</code>对应的字符为<code>𝌆，</code>它写成 UTF-16 就是<code>0xD834 0xDF06</code>。</p>
+<p>JavaScript 对 UTF-16 的支持是不完整的，由于历史原因，只支持两字节的字符，不支持四字节的字符。这是因为 JavaScript 第一版发布的时候，Unicode 的码点只编到<code>U+FFFF</code>，因此两字节足够表示了。后来，Unicode 纳入的字符越来越多，出现了四字节的编码。但是，JavaScript 的标准此时已经定型了，统一将字符长度限制在两字节，导致无法识别四字节的字符。上一节的那个四字节字符<code>𝌆</code>，浏览器会正确识别这是一个字符，但是 JavaScript 无法识别，会认为这是两个字符。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'𝌆'</span>.length <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，JavaScript 认为<code>𝌆</code>的长度为2，而不是1。</p>
+<p>总结一下，对于码点在<code>U+10000</code>到<code>U+10FFFF</code>之间的字符，JavaScript 总是认为它们是两个字符（<code>length</code>属性为2）。所以处理的时候，必须把这一点考虑在内，也就是说，JavaScript 返回的字符串长度可能是不正确的。</p>
+<h3 id="5-4Base64转码"><a href="#5-4Base64转码" class="headerlink" title="5.4Base64转码"></a>5.4Base64转码</h3><p>有时，文本里面包含一些不可打印的符号，比如 ASCII 码0到31的符号都无法打印出来，这时可以使用 Base64 编码，将它们转成可以打印的字符。另一个场景是，有时需要以文本格式传递二进制数据，那么也可以使用 Base64 编码。</p>
+<p>所谓 Base64 就是一种编码方法，可以将任意值转成 0～9、A～Z、a-z、<code>+</code>和<code>/</code>这64个字符组成的可打印字符。使用它的主要目的，不是为了加密，而是为了不出现特殊字符，简化程序的处理。</p>
+<p>JavaScript 原生提供两个 Base64 相关的方法。</p>
+<ul>
+<li><code>btoa()</code>：任意值转为 Base64 编码</li>
+<li><code>atob()</code>：Base64 编码转为原来的值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> string = <span class="string">'Hello World!'</span>;</span><br><span class="line">btoa(string) <span class="comment">// "SGVsbG8gV29ybGQh"</span></span><br><span class="line">atob(<span class="string">'SGVsbG8gV29ybGQh'</span>) <span class="comment">// "Hello World!"</span></span><br></pre></td></tr></table></figure>
+<p>注意，这两个方法不适合非 ASCII 码的字符，会报错。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">btoa(<span class="string">'你好'</span>) <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+<p>要将非 ASCII 码字符转为 Base64 编码，必须中间插入一个转码环节，再使用这两个方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64Encode</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> btoa(<span class="built_in">encodeURIComponent</span>(str));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b64Decode</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">decodeURIComponent</span>(atob(str));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b64Encode(<span class="string">'你好'</span>) <span class="comment">// "JUU0JUJEJUEwJUU1JUE1JUJE"</span></span><br><span class="line">b64Decode(<span class="string">'JUU0JUJEJUEwJUU1JUE1JUJE'</span>) <span class="comment">// "你好"</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-object"><a href="#6-object" class="headerlink" title="6.object"></a>6.object</h2><h3 id="6-1属性的查看"><a href="#6-1属性的查看" class="headerlink" title="6.1属性的查看"></a>6.1属性的查看</h3><p>查看一个对象本身的所有属性，可以使用<code>Object.keys</code>方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  key1: <span class="number">1</span>,</span><br><span class="line">  key2: <span class="number">2</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(obj);</span><br><span class="line"><span class="comment">// ['key1', 'key2']</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-2属性的删除：delete-命令"><a href="#6-2属性的删除：delete-命令" class="headerlink" title="6.2属性的删除：delete 命令"></a>6.2属性的删除：delete 命令</h3><p><code>delete</code>命令用于删除对象的属性，删除成功后返回<code>true</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="built_in">Object</span>.keys(obj) <span class="comment">// ["p"]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> obj.p <span class="comment">// true</span></span><br><span class="line">obj.p <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">Object</span>.keys(obj) <span class="comment">// []</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>delete</code>命令删除对象<code>obj</code>的<code>p</code>属性。删除后，再读取<code>p</code>属性就会返回<code>undefined</code>，而且<code>Object.keys</code>方法的返回值也不再包括该属性。</p>
+<p>注意，删除一个不存在的属性，<code>delete</code>不报错，而且返回<code>true</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">delete</span> obj.p <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对象<code>obj</code>并没有<code>p</code>属性，但是<code>delete</code>命令照样返回<code>true</code>。因此，不能根据<code>delete</code>命令的结果，认定某个属性是存在的。</p>
+<p>只有一种情况，<code>delete</code>命令会返回<code>false</code>，那就是该属性存在，且不得删除。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="built_in">Object</span>.defineProperty(&#123;&#125;, <span class="string">'p'</span>, &#123;</span><br><span class="line">  value: <span class="number">123</span>,</span><br><span class="line">  configurable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.p <span class="comment">// 123</span></span><br><span class="line"><span class="keyword">delete</span> obj.p <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>上面代码之中，对象<code>obj</code>的<code>p</code>属性是不能删除的，所以<code>delete</code>命令返回<code>false</code>（关于<code>Object.defineProperty</code>方法的介绍，请看《标准库》的 Object 对象一章）。</p>
+<p>另外，需要注意的是，<code>delete</code>命令只能删除对象本身的属性，无法删除继承的属性（关于继承参见《面向对象编程》章节）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">delete</span> obj.toString <span class="comment">// true</span></span><br><span class="line">obj.toString <span class="comment">// function toString() &#123; [native code] &#125;</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>toString</code>是对象<code>obj</code>继承的属性，虽然<code>delete</code>命令返回<code>true</code>，但该属性并没有被删除，依然存在。这个例子还说明，即使<code>delete</code>返回<code>true</code>，该属性依然可能读取到值。</p>
+<h3 id="6-3属性是否存在：in-运算符"><a href="#6-3属性是否存在：in-运算符" class="headerlink" title="6.3属性是否存在：in 运算符"></a>6.3属性是否存在：in 运算符</h3><p><code>in</code>运算符用于检查对象是否包含某个属性（注意，检查的是键名，不是键值），如果包含就返回<code>true</code>，否则返回<code>false</code>。它的左边是一个字符串，表示属性名，右边是一个对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123; <span class="attr">p</span>: <span class="number">1</span> &#125;;</span><br><span class="line"><span class="string">'p'</span> <span class="keyword">in</span> obj <span class="comment">// true</span></span><br><span class="line"><span class="string">'toString'</span> <span class="keyword">in</span> obj <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p><code>in</code>运算符的一个问题是，它不能识别哪些属性是对象自身的，哪些属性是继承的。就像上面代码中，对象<code>obj</code>本身并没有<code>toString</code>属性，但是<code>in</code>运算符会返回<code>true</code>，因为这个属性是继承的。</p>
+<p>这时，可以使用对象的<code>hasOwnProperty</code>方法判断一下，是否为对象自身的属性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">if</span> (<span class="string">'toString'</span> <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(obj.hasOwnProperty(<span class="string">'toString'</span>)) <span class="comment">// false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-4属性的遍历：for…in-循环"><a href="#6-4属性的遍历：for…in-循环" class="headerlink" title="6.4属性的遍历：for…in 循环"></a>6.4属性的遍历：for…in 循环</h3><p><code>for...in</code>循环用来遍历一个对象的全部属性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">3</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'键名：'</span>, i);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'键值：'</span>, obj[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 键名： a</span></span><br><span class="line"><span class="comment">// 键值： 1</span></span><br><span class="line"><span class="comment">// 键名： b</span></span><br><span class="line"><span class="comment">// 键值： 2</span></span><br><span class="line"><span class="comment">// 键名： c</span></span><br><span class="line"><span class="comment">// 键值： 3</span></span><br></pre></td></tr></table></figure>
+<p><code>for...in</code>循环有两个使用注意点。</p>
+<ul>
+<li>它遍历的是对象所有可遍历（enumerable）的属性，会跳过不可遍历的属性。</li>
+<li>它不仅遍历对象自身的属性，还遍历继承的属性。</li>
+</ul>
+<p>举例来说，对象都继承了<code>toString</code>属性，但是<code>for...in</code>循环不会遍历到这个属性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// toString 属性是存在的</span></span><br><span class="line">obj.toString <span class="comment">// toString() &#123; [native code] &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> p <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(p);</span><br><span class="line">&#125; <span class="comment">// 没有任何输出</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对象<code>obj</code>继承了<code>toString</code>属性，该属性不会被<code>for...in</code>循环遍历到，因为它默认是“不可遍历”的。关于对象属性的可遍历性，参见《标准库》章节中 Object 一章的介绍。</p>
+<p>如果继承的属性是可遍历的，那么就会被<code>for...in</code>循环遍历到。但是，一般情况下，都是只想遍历对象自身的属性，所以使用<code>for...in</code>的时候，应该结合使用<code>hasOwnProperty</code>方法，在循环内部判断一下，某个属性是否为对象自身的属性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">'老张'</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> person) &#123;</span><br><span class="line">  <span class="keyword">if</span> (person.hasOwnProperty(key)) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(key);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// name</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-5with-语句"><a href="#6-5with-语句" class="headerlink" title="6.5with 语句"></a>6.5with 语句</h2><p><code>with</code>语句的格式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> (对象) &#123;</span><br><span class="line">  语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>它的作用是操作同一个对象的多个属性时，提供一些书写的方便。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例一</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  p1: <span class="number">1</span>,</span><br><span class="line">  p2: <span class="number">2</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">with</span> (obj) &#123;</span><br><span class="line">  p1 = <span class="number">4</span>;</span><br><span class="line">  p2 = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line">obj.p1 = <span class="number">4</span>;</span><br><span class="line">obj.p2 = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 例二</span></span><br><span class="line"><span class="keyword">with</span> (<span class="built_in">document</span>.links[<span class="number">0</span>])&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(href);</span><br><span class="line">  <span class="built_in">console</span>.log(title);</span><br><span class="line">  <span class="built_in">console</span>.log(style);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.links[<span class="number">0</span>].href);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.links[<span class="number">0</span>].title);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.links[<span class="number">0</span>].style);</span><br></pre></td></tr></table></figure>
+<p>注意，如果<code>with</code>区块内部有变量的赋值操作，必须是当前对象已经存在的属性，否则会创造一个当前作用域的全局变量。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">with</span> (obj) &#123;</span><br><span class="line">  p1 = <span class="number">4</span>;</span><br><span class="line">  p2 = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.p1 <span class="comment">// undefined</span></span><br><span class="line">p1 <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，对象<code>obj</code>并没有<code>p1</code>属性，对<code>p1</code>赋值等于创造了一个全局变量<code>p1</code>。正确的写法应该是，先定义对象<code>obj</code>的属性<code>p1</code>，然后在<code>with</code>区块内操作它。</p>
+<p>这是因为<code>with</code>区块没有改变作用域，它的内部依然是当前作用域。这造成了<code>with</code>语句的一个很大的弊病，就是绑定对象不明确。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> (obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>单纯从上面的代码块，根本无法判断<code>x</code>到底是全局变量，还是对象<code>obj</code>的一个属性。这非常不利于代码的除错和模块化，编译器也无法对这段代码进行优化，只能留到运行时判断，这就拖慢了运行速度。因此，建议不要使用<code>with</code>语句，可以考虑用一个临时变量代替<code>with</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span>(obj1.obj2.obj3) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(p1 + p2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可以写成</span></span><br><span class="line"><span class="keyword">var</span> temp = obj1.obj2.obj3;</span><br><span class="line"><span class="built_in">console</span>.log(temp.p1 + temp.p2);</span><br></pre></td></tr></table></figure>
+<h2 id="7-参考资料"><a href="#7-参考资料" class="headerlink" title="7.参考资料"></a>7.参考资料</h2><p>阮一峰博客<a href="https://wangdoc.com/javascript/types/" target="_blank" rel="noopener">https://wangdoc.com/javascript/types/</a></p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2019/05/19/BFC/" class="next-post btn btn-default" title="BFC">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">BFC</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
+            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JS数据类型"><span class="toc-text">JS数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-数据类型概述"><span class="toc-text">1.数据类型概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-null-和-undefined"><span class="toc-text">2.null 和 undefined</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1概述"><span class="toc-text">2.1概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2用法和含义"><span class="toc-text">2.2用法和含义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-boolean"><span class="toc-text">3.boolean</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-number"><span class="toc-text">4.number</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1整数和浮点数"><span class="toc-text">4.1整数和浮点数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2数值范围"><span class="toc-text">4.2数值范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3进制"><span class="toc-text">4.3进制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4NaN"><span class="toc-text">4.4NaN</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-1含义"><span class="toc-text">4.4.1含义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-2运算规则"><span class="toc-text">4.4.2运算规则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5parseInt"><span class="toc-text">4.5parseInt()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-1基本用法"><span class="toc-text">4.5.1基本用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-2进制转换"><span class="toc-text">4.5.2进制转换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-parseFloat"><span class="toc-text">4.6 parseFloat()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-isNaN"><span class="toc-text">4.6 isNaN()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-string"><span class="toc-text">5.string</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1概述"><span class="toc-text">5.1概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2字符串与数组"><span class="toc-text">5.2字符串与数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3字符集"><span class="toc-text">5.3字符集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4Base64转码"><span class="toc-text">5.4Base64转码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-object"><span class="toc-text">6.object</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1属性的查看"><span class="toc-text">6.1属性的查看</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2属性的删除：delete-命令"><span class="toc-text">6.2属性的删除：delete 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3属性是否存在：in-运算符"><span class="toc-text">6.3属性是否存在：in 运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4属性的遍历：for…in-循环"><span class="toc-text">6.4属性的遍历：for…in 循环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5with-语句"><span class="toc-text">6.5with 语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-参考资料"><span class="toc-text">7.参考资料</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>

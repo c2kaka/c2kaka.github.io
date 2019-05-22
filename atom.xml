@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-21T13:30:15.497Z</updated>
+  <updated>2019-05-22T02:40:29.292Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS数据类型转换</title>
+    <link href="http://yoursite.com/2019/05/22/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"/>
+    <id>http://yoursite.com/2019/05/22/JS数据类型转换/</id>
+    <published>2019-05-22T02:12:52.000Z</published>
+    <updated>2019-05-22T02:40:29.292Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JS数据类型转换"><a href="#JS数据类型转换" class="headerlink" title="JS数据类型转换"></a>JS数据类型转换</h1><h2 id="1-any-to-string"><a href="#1-any-to-string" class="headerlink" title="1.any to string"></a>1.any to string</h2><ul><li>使用<code>toString()</code></li><li>使用<code>String()</code>转换</li><li>和空字符串相加<code>+&#39;&#39;</code></li></ul><h2 id="2-any-to-boolean"><a href="#2-any-to-boolean" class="headerlink" title="2.any to boolean"></a>2.any to boolean</h2><ul><li><p>使用<code>Boolean()</code>转换</p></li><li><p><code>!!a</code></p></li></ul><p>六个falsy值</p><ol><li><code>false</code></li><li><code>null</code></li><li><code>0</code></li><li><code>NaN</code></li><li><code>undefined</code></li><li><code>&#39;&#39;</code></li></ol><p>对象<code>object</code>转换为<code>boolean</code>都为<code>true</code></p><h2 id="3-string-to-number"><a href="#3-string-to-number" class="headerlink" title="3.string to number"></a>3.string to number</h2><ul><li>使用<code>Number()</code>转换</li><li><code>parseInt()</code> 和 <code>parseFloat()</code></li><li><code>&#39;1&#39;-0</code></li><li><code>+&#39;1&#39;</code></li></ul><h2 id="4-JS内存图解"><a href="#4-JS内存图解" class="headerlink" title="4.JS内存图解"></a>4.JS内存图解</h2><h3 id="4-1概述"><a href="#4-1概述" class="headerlink" title="4.1概述"></a>4.1概述</h3><p><img src="https://i.loli.net/2019/05/22/5ce4b47155b9081701.png" alt="内存图解.png"></p><p>初始类型的值如string、boolean、number存在Stack栈内存中，而object将Heap堆内存的地址存在Stack栈内存中。</p><h3 id="4-2常见考题"><a href="#4-2常见考题" class="headerlink" title="4.2常见考题"></a>4.2常见考题</h3><p><img src="https://i.loli.net/2019/05/22/5ce4b5a08229f10745.png" alt="QQ截图20190522093646.png"></p><p>遇到上述题目，可以先画内存图解，但是要注意 <code>a.x = a = {n:2};</code>是先确定a的内存地址再进行赋值的</p><h3 id="4-3GC垃圾回收的简单理解"><a href="#4-3GC垃圾回收的简单理解" class="headerlink" title="4.3GC垃圾回收的简单理解"></a>4.3GC垃圾回收的简单理解</h3><p>如果一个对象没有被引用，它就是垃圾，可以被回收，可以画出内存图解方便理解。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;JS数据类型转换&quot;&gt;&lt;a href=&quot;#JS数据类型转换&quot; class=&quot;headerlink&quot; title=&quot;JS数据类型转换&quot;&gt;&lt;/a&gt;JS数据类型转换&lt;/h1&gt;&lt;h2 id=&quot;1-any-to-string&quot;&gt;&lt;a href=&quot;#1-any-to-strin
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Javascript" scheme="http://yoursite.com/tags/Javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>JS数据类型</title>

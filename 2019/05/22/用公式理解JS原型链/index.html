@@ -16,16 +16,11 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="Javascript">
+    <meta name="keywords" content="JavaScript">
 
 
-    <meta name="description" content="JS数据类型转换1.any to string
-使用toString()
-使用String()转换
-和空字符串相加+&#39;&#39;
-
-2.any to boolean
-使用Boolean(...">
+    <meta name="description" content="用公式理解JS原型链重要公式
+123456789101112131415161718var 对象 = new 构造函数();对象.__proto__ === 构造函数.protoType //t...">
 
 
 
@@ -37,7 +32,7 @@
     <!--Title-->
 
 
-<title>JS数据类型转换 | 欧阳帆</title>
+<title>用公式理解JS原型链 | 欧阳帆</title>
 
 
     <link rel="alternate" href="/atom.xml" title="欧阳帆" type="application/atom+xml">
@@ -142,9 +137,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="JS数据类型转换">
+        <h1 id="用公式理解JS原型链">
             
-	            JS数据类型转换
+	            用公式理解JS原型链
             
         </h1>
         <div class="post-meta">
@@ -160,7 +155,7 @@
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
                 
-                    <a class="tag-link" href="/tags/Javascript/">Javascript</a>
+                    <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
                 
             </span>
         </span>
@@ -180,38 +175,9 @@
     </div>
     
     <div class="post-body post-content">
-        <h1 id="JS数据类型转换"><a href="#JS数据类型转换" class="headerlink" title="JS数据类型转换"></a>JS数据类型转换</h1><h2 id="1-any-to-string"><a href="#1-any-to-string" class="headerlink" title="1.any to string"></a>1.any to string</h2><ul>
-<li>使用<code>toString()</code></li>
-<li>使用<code>String()</code>转换</li>
-<li>和空字符串相加<code>+&#39;&#39;</code></li>
-</ul>
-<h2 id="2-any-to-boolean"><a href="#2-any-to-boolean" class="headerlink" title="2.any to boolean"></a>2.any to boolean</h2><ul>
-<li><p>使用<code>Boolean()</code>转换</p>
-</li>
-<li><p><code>!!a</code></p>
-</li>
-</ul>
-<p>六个falsy值</p>
-<ol>
-<li><code>false</code></li>
-<li><code>null</code></li>
-<li><code>0</code></li>
-<li><code>NaN</code></li>
-<li><code>undefined</code></li>
-<li><code>&#39;&#39;</code></li>
-</ol>
-<p>对象<code>object</code>转换为<code>boolean</code>都为<code>true</code></p>
-<h2 id="3-string-to-number"><a href="#3-string-to-number" class="headerlink" title="3.string to number"></a>3.string to number</h2><ul>
-<li>使用<code>Number()</code>转换</li>
-<li><code>parseInt()</code> 和 <code>parseFloat()</code></li>
-<li><code>&#39;1&#39;-0</code></li>
-<li><code>+&#39;1&#39;</code></li>
-</ul>
-<h2 id="4-JS内存图解"><a href="#4-JS内存图解" class="headerlink" title="4.JS内存图解"></a>4.JS内存图解</h2><h3 id="4-1概述"><a href="#4-1概述" class="headerlink" title="4.1概述"></a>4.1概述</h3><p><img src="https://i.loli.net/2019/05/22/5ce4b47155b9081701.png" alt="内存图解.png"></p>
-<p>初始类型的值如string、boolean、number存在Stack栈内存中，而object将Heap堆内存的地址存在Stack栈内存中。</p>
-<h3 id="4-2常见考题"><a href="#4-2常见考题" class="headerlink" title="4.2常见考题"></a>4.2常见考题</h3><p><img src="https://i.loli.net/2019/05/22/5ce4b5a08229f10745.png" alt="QQ截图20190522093646.png"></p>
-<p>遇到上述题目，可以先画内存图解，但是要注意 <code>a.x = a = {n:2};</code>是先确定a的内存地址再进行赋值的</p>
-<h3 id="4-3GC垃圾回收的简单理解"><a href="#4-3GC垃圾回收的简单理解" class="headerlink" title="4.3GC垃圾回收的简单理解"></a>4.3GC垃圾回收的简单理解</h3><p>如果一个对象没有被引用，它就是垃圾，可以被回收，可以画出内存图解方便理解。</p>
+        <h1 id="用公式理解JS原型链"><a href="#用公式理解JS原型链" class="headerlink" title="用公式理解JS原型链"></a>用公式理解JS原型链</h1><p>重要公式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 对象 = <span class="keyword">new</span> 构造函数();</span><br><span class="line">对象.__proto__ === 构造函数.protoType <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//推论</span></span><br><span class="line"><span class="keyword">var</span> number = <span class="keyword">new</span> <span class="built_in">Number</span>();</span><br><span class="line">number.__proto__ === <span class="built_in">Number</span>.protoType <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> object = <span class="keyword">new</span> <span class="built_in">Object</span>()</span><br><span class="line">object.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> <span class="function"><span class="keyword">function</span> = <span class="title">new</span> <span class="title">Function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"><span class="title">function</span>.<span class="title">__proto__</span> === <span class="title">Function</span>.<span class="title">prototype</span> //<span class="title">true</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">// 另外，所有函数都是由 <span class="title">Function</span> 构造出来的，所以</span></span><br><span class="line"><span class="function"><span class="title">Number</span>.<span class="title">__proto__</span> === <span class="title">Function</span>.<span class="title">prototype</span> // 因为 <span class="title">Number</span> 是函数，是 <span class="title">Function</span> 的实例</span></span><br><span class="line"><span class="function"><span class="title">Object</span>.<span class="title">__proto__</span> === <span class="title">Function</span>.<span class="title">prototype</span> // 因为 <span class="title">Object</span> 是函数，是 <span class="title">Function</span> 的实例</span></span><br><span class="line"><span class="function"><span class="title">Function</span>.<span class="title">__proto__</span> === <span class="title">Function</span>.<span class="title">prototye</span> // 因为 <span class="title">Function</span> 是函数，是 <span class="title">Function</span> 的实例！</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/05/22/5ce509ea57fc457733.png" alt="原型链2.png"></p>
 
     </div>
     
@@ -229,15 +195,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2019/05/22/用公式理解JS原型链/" class="pre-post btn btn-default" title="用公式理解JS原型链">
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">用公式理解JS原型链</span>
-        </a>
     
-    
-        <a href="/2019/05/21/JS数据类型/" class="next-post btn btn-default" title="JS数据类型">
+        <a href="/2019/05/22/JS数据类型转换/" class="next-post btn btn-default" title="JS数据类型转换">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">JS数据类型</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">JS数据类型转换</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -280,7 +241,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JS数据类型转换"><span class="toc-text">JS数据类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-any-to-string"><span class="toc-text">1.any to string</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-any-to-boolean"><span class="toc-text">2.any to boolean</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-string-to-number"><span class="toc-text">3.string to number</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-JS内存图解"><span class="toc-text">4.JS内存图解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1概述"><span class="toc-text">4.1概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2常见考题"><span class="toc-text">4.2常见考题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3GC垃圾回收的简单理解"><span class="toc-text">4.3GC垃圾回收的简单理解</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用公式理解JS原型链"><span class="toc-text">用公式理解JS原型链</span></a></li></ol>
         
     </div>
 </aside>
